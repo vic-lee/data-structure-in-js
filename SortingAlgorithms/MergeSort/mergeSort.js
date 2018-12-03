@@ -15,7 +15,7 @@ const mergeSort = (arr) => {
   const leftArrSorted = recursiveMergeSort(arr.slice(0, middleIndex + 1));
   const rightArrSorted = recursiveMergeSort(arr.slice(middleIndex + 1));
 
-  return Array.join(leftArrSorted, rightArrSorted);
+  return leftArrSorted.concat(rightArrSorted);
 } 
 
 const recursiveMergeSort = (arr) => {
